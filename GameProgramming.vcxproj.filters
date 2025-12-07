@@ -1,63 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
+    <Filter Include="Source">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="헤더 파일">
+    <Filter Include="Header">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="리소스 파일">
+    <Filter Include="Resource">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header\Frameworks">
+      <UniqueIdentifier>{c0e1d9b6-a5d6-4e59-91f0-ac4c54f5bc3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Frameworks">
+      <UniqueIdentifier>{f8c37003-aa6f-4e48-a1d8-5eac01f70c50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D3DApp.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Frameworks\D3DApp.h">
+      <Filter>Header\Frameworks</Filter>
     </ClInclude>
-    <ClInclude Include="d3dUtil.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Frameworks\d3dUtil.h">
+      <Filter>Header\Frameworks</Filter>
     </ClInclude>
-    <ClInclude Include="d3dx12.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Frameworks\d3dx12.h">
+      <Filter>Header\Frameworks</Filter>
     </ClInclude>
-    <ClInclude Include="GameTimer.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Frameworks\DDSTextureLoader.h">
+      <Filter>Header\Frameworks</Filter>
     </ClInclude>
-    <ClInclude Include="DDSTextureLoader.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Frameworks\GameTimer.h">
+      <Filter>Header\Frameworks</Filter>
     </ClInclude>
-    <ClInclude Include="MathHelper.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Frameworks\MathHelper.h">
+      <Filter>Header\Frameworks</Filter>
     </ClInclude>
-    <ClInclude Include="UploadBuffer.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Frameworks\UploadBuffer.h">
+      <Filter>Header\Frameworks</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D3DApp.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="d3dUtil.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="GameTimer.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="DDSTextureLoader.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MathHelper.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="InitDirect3D.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="BoxApp.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Frameworks\MathHelper.cpp">
+      <Filter>Source\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="Frameworks\D3DApp.cpp">
+      <Filter>Source\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="Frameworks\d3dUtil.cpp">
+      <Filter>Source\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="Frameworks\DDSTextureLoader.cpp">
+      <Filter>Source\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="Frameworks\GameTimer.cpp">
+      <Filter>Source\Frameworks</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

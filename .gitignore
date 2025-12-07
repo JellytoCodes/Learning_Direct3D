@@ -1,0 +1,8 @@
+# Visual Studio 관련
+.vs/
+.vscode/
+*.sln
+*.VC.db
+*.log
+*.tmp
+*.user

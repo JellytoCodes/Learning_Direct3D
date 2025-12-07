@@ -1,6 +1,6 @@
-#include "D3DApp.h"
-#include "MathHelper.h"
-#include "UploadBuffer.h"
+#include "Frameworks/d3dApp.h"
+#include "Frameworks/MathHelper.h"
+#include "Frameworks/UploadBuffer.h"
 
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
