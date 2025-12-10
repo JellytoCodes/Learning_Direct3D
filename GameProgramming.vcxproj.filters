@@ -42,6 +42,12 @@
     <ClInclude Include="Frameworks\UploadBuffer.h">
       <Filter>Header\Frameworks</Filter>
     </ClInclude>
+    <ClInclude Include="Frameworks\GeometryGenerator.h">
+      <Filter>Header\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameResource.h">
+      <Filter>Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BoxApp.cpp">
@@ -61,6 +67,15 @@
     </ClCompile>
     <ClCompile Include="Frameworks\GameTimer.cpp">
       <Filter>Source\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="SpheresApp.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Frameworks\GeometryGenerator.cpp">
+      <Filter>Source\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameResource.cpp">
+      <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

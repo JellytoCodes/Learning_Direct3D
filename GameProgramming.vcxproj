@@ -19,21 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FrameResource.h" />
     <ClInclude Include="Frameworks\D3DApp.h" />
     <ClInclude Include="Frameworks\d3dUtil.h" />
     <ClInclude Include="Frameworks\d3dx12.h" />
     <ClInclude Include="Frameworks\DDSTextureLoader.h" />
     <ClInclude Include="Frameworks\GameTimer.h" />
+    <ClInclude Include="Frameworks\GeometryGenerator.h" />
     <ClInclude Include="Frameworks\MathHelper.h" />
     <ClInclude Include="Frameworks\UploadBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BoxApp.cpp" />
+    <ClCompile Include="FrameResource.cpp" />
     <ClCompile Include="Frameworks\D3DApp.cpp" />
     <ClCompile Include="Frameworks\d3dUtil.cpp" />
     <ClCompile Include="Frameworks\DDSTextureLoader.cpp" />
     <ClCompile Include="Frameworks\GameTimer.cpp" />
+    <ClCompile Include="Frameworks\GeometryGenerator.cpp" />
     <ClCompile Include="Frameworks\MathHelper.cpp" />
+    <ClCompile Include="SpheresApp.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
