@@ -196,7 +196,7 @@ GeometryGenerator::MeshData GeometryGenerator::CreateSphere(float radius, uint32
 	//
 
 	// South pole vertex was added last.
-	uint32 southPoleIndex = (uint32)meshData.Vertices.size()-1;
+	uint32 southPoleIndex = static_cast<uint32>(meshData.Vertices.size()-1);
 
 	// Offset the indices to the index of the first vertex in the last ring.
 	baseIndex = southPoleIndex - ringVertexCount;
@@ -230,7 +230,7 @@ void GeometryGenerator::Subdivide(MeshData& meshData)
 	// *-----*-----*
 	// v0    m2     v2
 
-	uint32 numTris = (uint32)inputCopy.Indices32.size()/3;
+	uint32 numTris = static_cast<uint32>(inputCopy.Indices32.size()/3);
 	for(uint32 i = 0; i < numTris; ++i)
 	{
 		Vertex v0 = inputCopy.Vertices[ inputCopy.Indices32[i*3+0] ];
