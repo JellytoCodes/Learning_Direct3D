@@ -2,10 +2,14 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\D3DirectX12\GameProgramming\GameProgramming\Binaries\GameCoding.exe</FullPath>
+      <FullPath>D:\Dev\Programming_Study\Learning_Direct3D\Binaries\GameCoding.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
-  <ContentFiles />
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>D:\Dev\Programming_Study\Learning_Direct3D\Binaries\Default.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
 </Project>

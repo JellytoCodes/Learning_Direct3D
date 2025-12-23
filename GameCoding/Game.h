@@ -1,4 +1,6 @@
 #pragma once
+#include "Struct.h"
+
 class Game
 {
 public :
@@ -9,14 +11,6 @@ public :
 	void Init(HWND hwnd);
 	void Update();
 	void Render();
-
-private :
-	void CreateDeviceAndSwapChain();
-	void CreateRenderTargetView();
-	void SetViewport();
-
-	void RenderBegin();
-	void RenderEnd();
 
 private :
 	HWND _hwnd;
@@ -34,5 +28,34 @@ private :
 
 	// Misc
 	D3D11_VIEWPORT _viewport = {0};
-	float _clearColor[4] = {0.5f, 0.5f, 0.5f, 0.5f};
+	float _clearColor[4] = {0.f, 0.f, 0.f, 0.f};
+
+	void CreateDeviceAndSwapChain();
+	void CreateRenderTargetView();
+	void SetViewport();
+
+	void RenderBegin();
+	void RenderEnd();
+
+private :
+	// Geometry
+	vector<Vertex> _vertices;
+	ComPtr<ID3D11Buffer> _vertexBuffer;
+	ComPtr<ID3D11InputLayout> _inputLayout;
+
+	// VS
+	ComPtr<ID3D11VertexShader> _vertexShader;
+	ComPtr<ID3DBlob> _vsBlob;
+
+	// PS
+	ComPtr<ID3D11PixelShader> _pixelShader;
+	ComPtr<ID3DBlob> _psBlob;
+
+	void CreateGeometry();
+	void CreateInputLayout();
+	void CreateVS();
+	void CreatePS();
+
+	void LoadShaderFromFile(const wstring& path, const string& name, const string& version, ComPtr<ID3DBlob>& blob);
+	
 };

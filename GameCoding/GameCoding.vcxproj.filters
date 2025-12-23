@@ -15,6 +15,9 @@
     <Filter Include="Source Files\01. Main">
       <UniqueIdentifier>{4039e3b3-1b05-49a8-b1da-f4d476c0e202}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\98. Shaders">
+      <UniqueIdentifier>{3c4b6820-27d4-436d-ab97-319d996bf2a9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -68,5 +71,10 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files\01. Main</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Default.hlsl">
+      <Filter>Source Files\98. Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
