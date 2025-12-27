@@ -36,11 +36,11 @@ void Game::Init(HWND hwnd)
 
 void Game::Update()
 {
-	//_transformData.offset.x += 0.0003f;
-	//_transformData.offset.y += 0.0003f;
+	_transformData.offset.x += 0.005f;
+	if (_transformData.offset.x >= 2.f) _transformData.offset.x = -2.f;
 
 	D3D11_MAPPED_SUBRESOURCE subResource;
-	ZeroMemory(&subResource, sizeof(subResource));
+	ZeroMemory(&subResource, sizeof(D3D11_MAPPED_SUBRESOURCE));
 
 	_deviceContext->Map(_constantBuffer.Get(), 0, D3D11_MAP_WRITE_DISCARD, 0, &subResource);
 	::memcpy(subResource.pData, &_transformData, sizeof(_transformData));
@@ -162,27 +162,27 @@ void Game::CreateGeometry()
 	{
 		_vertices.resize(4);
 
-		_vertices[0].position = Vec3(-0.5, -0.5, 0);
-		_vertices[0].uv = Vec2(0.f, 5.f);
+		_vertices[0].position = Vec3(-1.f, -1.f, 0);
+		_vertices[0].uv = Vec2(0.f, 1.f);
 		//_vertices[0].color = Color(1.f, 0.f, 0.f, 1.f);
 
-		_vertices[1].position = Vec3(-0.5, 0.5, 0);
+		_vertices[1].position = Vec3(-1.f, 1.f, 0);
 		_vertices[1].uv = Vec2(0.f, 0.f);
 		//_vertices[1].color = Color(0.f, 1.f, 0.f, 1.f);
 
-		_vertices[2].position = Vec3(0.5, -0.5, 0);
-		_vertices[2].uv = Vec2(5.f, 5.f);
+		_vertices[2].position = Vec3(1.f, -1.f, 0);
+		_vertices[2].uv = Vec2(1.f, 1.f);
 		//_vertices[2].color = Color(0.f, 0.f, 1.f, 1.f);
 
-		_vertices[3].position = Vec3(0.5, 0.5, 0);
-		_vertices[3].uv = Vec2(5.f, 0.f);
+		_vertices[3].position = Vec3(1.f, 1.f, 0);
+		_vertices[3].uv = Vec2(1.f, 0.f);
 		//_vertices[3].color = Color(1.f, 0.f, 0.f, 1.f);
 	}
 	
 	// Vertex Buffer
 	{
 		D3D11_BUFFER_DESC desc;
-		ZeroMemory(&desc, sizeof(desc));
+		ZeroMemory(&desc, sizeof(D3D11_BUFFER_DESC));
 		desc.Usage = D3D11_USAGE_IMMUTABLE;
 		desc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 		desc.ByteWidth = static_cast<uint32>(sizeof(Vertex) * _vertices.size());
@@ -203,7 +203,7 @@ void Game::CreateGeometry()
 	// Index Buffer
 	{
 		D3D11_BUFFER_DESC desc;
-		ZeroMemory(&desc, sizeof(desc));
+		ZeroMemory(&desc, sizeof(D3D11_BUFFER_DESC));
 		desc.Usage = D3D11_USAGE_IMMUTABLE;
 		desc.BindFlags = D3D11_BIND_INDEX_BUFFER;
 		desc.ByteWidth = static_cast<uint32>(sizeof(uint32) * _indices.size());
@@ -276,7 +276,7 @@ void Game::CreateSRV()
 void Game::CreateRasterizerState()
 {
 	D3D11_RASTERIZER_DESC desc;
-	ZeroMemory(&desc, sizeof(desc));
+	ZeroMemory(&desc, sizeof(D3D11_RASTERIZER_DESC));
 	desc.FillMode = D3D11_FILL_SOLID;
 	desc.CullMode = D3D11_CULL_BACK;
 	desc.FrontCounterClockwise = false;
@@ -288,14 +288,14 @@ void Game::CreateRasterizerState()
 void Game::CreateSamplerState()
 {
 	D3D11_SAMPLER_DESC desc;
-	ZeroMemory(&desc, sizeof(desc));
-	desc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
+	ZeroMemory(&desc, sizeof(D3D11_SAMPLER_DESC));
+	desc.AddressU = D3D11_TEXTURE_ADDRESS_BORDER;
 	desc.AddressV = D3D11_TEXTURE_ADDRESS_BORDER;
-	desc.AddressW = D3D11_TEXTURE_ADDRESS_WRAP;
-	desc.BorderColor[0] = 1;
-	desc.BorderColor[1] = 1;
-	desc.BorderColor[2] = 1;
-	desc.BorderColor[3] = 1;
+	desc.AddressW = D3D11_TEXTURE_ADDRESS_BORDER;
+	desc.BorderColor[0] = 0;
+	desc.BorderColor[1] = 0;
+	desc.BorderColor[2] = 0;
+	desc.BorderColor[3] = 0;
 	desc.ComparisonFunc = D3D11_COMPARISON_ALWAYS;
 	desc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
 	desc.MaxAnisotropy = 16;
@@ -310,7 +310,7 @@ void Game::CreateSamplerState()
 void Game::CreateBlendState()
 {
 	D3D11_BLEND_DESC desc;
-	ZeroMemory(&desc, sizeof(desc));
+	ZeroMemory(&desc, sizeof(D3D11_BLEND_DESC));
 	desc.AlphaToCoverageEnable = false;
 	desc.IndependentBlendEnable = false;
 
@@ -330,7 +330,7 @@ void Game::CreateBlendState()
 void Game::CreateConstantBuffer()
 {
 	D3D11_BUFFER_DESC desc;
-	ZeroMemory(&desc, sizeof(desc));
+	ZeroMemory(&desc, sizeof(D3D11_BUFFER_DESC));
 	desc.Usage = D3D11_USAGE_DYNAMIC; // CPU_Write + GPU_Read
 	desc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
 	desc.ByteWidth = sizeof(TransformData);

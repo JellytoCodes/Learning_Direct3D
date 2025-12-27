@@ -38,7 +38,7 @@ SamplerState sampler0 : register(s0);
 // 색상과 관련된 변화
 float4 PS(VS_OUTPUT input) : SV_Target
 {
-	float4 color = texture0.Sample(sampler0, input.uv);
+	float4 color = texture1.Sample(sampler0, input.uv);
 
 	return color;
 }
