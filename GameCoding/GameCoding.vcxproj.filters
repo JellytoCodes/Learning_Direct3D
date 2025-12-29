@@ -21,6 +21,30 @@
     <Filter Include="Source Files\99. Headers\Utils">
       <UniqueIdentifier>{4fa7965e-c22c-4ea0-93a4-724dfe29629a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\00. Engine">
+      <UniqueIdentifier>{c621c178-818e-4c22-a36f-38b0262ea5ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\00. Engine\Pipeline">
+      <UniqueIdentifier>{78f5df6c-9e8c-4b65-b824-158c1490669c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\00. Engine\Pipeline\01. InputAssembler">
+      <UniqueIdentifier>{57e76e1c-08ef-4c1c-85a8-b91452430879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\00. Engine\Pipeline\00. Geometry">
+      <UniqueIdentifier>{e5b0a12a-4633-47a6-b279-3e9bb3d0e0be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\00. Engine\Pipeline\02. VertexShader">
+      <UniqueIdentifier>{6b2317a0-95bf-40f9-90bf-5f1b85b42d6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\00. Engine\Pipeline\03. Rasterizer">
+      <UniqueIdentifier>{7163bc0c-1425-45b5-8712-4c0f2350837a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\00. Engine\Pipeline\04. PixelShader">
+      <UniqueIdentifier>{701774cc-b58c-4d50-a4c8-e60ccc586662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\00. Engine\Pipeline\05. OutputMerger">
+      <UniqueIdentifier>{0be2f9ab-f0a7-4e9d-907c-b223b1175090}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -53,6 +77,18 @@
     <ClInclude Include="SimpleMath.h">
       <Filter>Source Files\99. Headers\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Source Files\00. Engine\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Source Files\00. Engine\Pipeline\01. InputAssembler</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>Source Files\00. Engine\Pipeline\01. InputAssembler</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLayout.h">
+      <Filter>Source Files\00. Engine\Pipeline\01. InputAssembler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameCoding.rc">
@@ -79,6 +115,18 @@
     </ClCompile>
     <ClCompile Include="SimpleMath.cpp">
       <Filter>Source Files\99. Headers\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Source Files\00. Engine\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>Source Files\00. Engine\Pipeline\01. InputAssembler</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLayout.cpp">
+      <Filter>Source Files\00. Engine\Pipeline\01. InputAssembler</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>Source Files\00. Engine\Pipeline\01. InputAssembler</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

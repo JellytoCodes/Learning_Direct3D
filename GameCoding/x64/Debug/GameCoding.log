@@ -1,5 +1,7 @@
 ﻿  Game.cpp
-D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Game.cpp(91,44): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Game.cpp(97,44): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
   (compiling source file '/Game.cpp')
   
+  GameCoding.cpp
+  Generating Code...
   GameCoding.vcxproj -> D:\Dev\Programming_Study\Learning_Direct3D\Binaries\GameCoding.exe
