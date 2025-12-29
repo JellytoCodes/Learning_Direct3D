@@ -1,10 +1,5 @@
 ﻿  Game.cpp
-D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Game.cpp(81,44): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Game.cpp(91,44): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
   (compiling source file '/Game.cpp')
   
-DirectXTex_debug.lib(BC.obj) : warning LNK4099: PDB 'DirectXTex.pdb' was not found with 'DirectXTex_debug.lib(BC.obj)' or at 'D:\Dev\Programming_Study\Learning_Direct3D\Binaries\DirectXTex.pdb'; linking object as if no debug info
-DirectXTex_debug.lib(BC4BC5.obj) : warning LNK4099: PDB 'DirectXTex.pdb' was not found with 'DirectXTex_debug.lib(BC4BC5.obj)' or at 'D:\Dev\Programming_Study\Learning_Direct3D\Binaries\DirectXTex.pdb'; linking object as if no debug info
-DirectXTex_debug.lib(BC6HBC7.obj) : warning LNK4099: PDB 'DirectXTex.pdb' was not found with 'DirectXTex_debug.lib(BC6HBC7.obj)' or at 'D:\Dev\Programming_Study\Learning_Direct3D\Binaries\DirectXTex.pdb'; linking object as if no debug info
-DirectXTex_debug.lib(DirectXTexConvert.obj) : warning LNK4099: PDB 'DirectXTex.pdb' was not found with 'DirectXTex_debug.lib(DirectXTexConvert.obj)' or at 'D:\Dev\Programming_Study\Learning_Direct3D\Binaries\DirectXTex.pdb'; linking object as if no debug info
-DirectXTex_debug.lib(DirectXTexMipMaps.obj) : warning LNK4099: PDB 'DirectXTex.pdb' was not found with 'DirectXTex_debug.lib(DirectXTexMipMaps.obj)' or at 'D:\Dev\Programming_Study\Learning_Direct3D\Binaries\DirectXTex.pdb'; linking object as if no debug info
   GameCoding.vcxproj -> D:\Dev\Programming_Study\Learning_Direct3D\Binaries\GameCoding.exe
