@@ -7,9 +7,10 @@ public :
 	~VertexBuffer();
 
 	ComPtr<ID3D11Buffer> GetComPtr() const { return _vertexBuffer; }
-	uint32 GetStride() const { return _stride; }
-	uint32 GetOffset() const { return _offset; }
-	uint32 GetCount() const { return _count; }
+
+	uint32 GetStride() const	{ return _stride; }
+	uint32 GetOffset() const	{ return _offset; }
+	uint32 GetCount() const		{ return _count; }
 
 	template<typename T>
 	void Create(const vector<T>& vertices);

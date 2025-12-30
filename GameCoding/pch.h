@@ -30,10 +30,6 @@ using namespace DirectX;
 using namespace Microsoft::WRL;
 
 // Engine
-#include "Graphics.h"
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
-#include "InputLayout.h"
 
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3dcompiler.lib")

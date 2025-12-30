@@ -1,8 +1,14 @@
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\ConstantBuffer.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\ConstantBuffer.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Game.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Game.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\GameCoding.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\GameCoding.obj
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Geomertyelper.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Geomertyelper.obj
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Geometry.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Geometry.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Graphics.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Graphics.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\IndexBuffer.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\IndexBuffer.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\InputLayout.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\InputLayout.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\pch.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\pch.obj
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Shader.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Shader.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\SimpleMath.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\SimpleMath.obj
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Texture.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Texture.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\VertexBuffer.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\VertexBuffer.obj
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\VertexData.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\VertexData.obj
