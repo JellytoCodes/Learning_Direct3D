@@ -26,8 +26,8 @@ int APIENTRY wWinMain(
     // 2) 윈도우 창 생성
     if (!InitInstance (hInstance, nCmdShow)) return FALSE;
 
-    Game game;
-    game.Init(hWnd);
+    Game game(hWnd);
+    game.Init();
     MSG msg = {};
 
     // Main message loop:

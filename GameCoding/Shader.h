@@ -1,6 +1,6 @@
 #pragma once
 
-enum ShaderScope
+enum class ShaderScope : uint32
 {
 	SS_None = 0,
 	SS_VertexShader = (1 << 0),
@@ -16,7 +16,6 @@ public :
 	virtual void Create(const wstring& path, const string& name, const string& version) abstract;
 
 	ComPtr<ID3DBlob> GetBlob() { return _blob;}
-
 
 protected :
 	void LoadShaderFromFile(const wstring& path, const string& name, const string& version);

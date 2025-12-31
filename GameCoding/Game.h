@@ -1,7 +1,10 @@
 #pragma once
-#include "ConstantBuffer.h"
-#include "Geometry.h"
 
+class GameObject;
+class Pipeline;
+class SamplerState;
+class BlendState;
+class RasterizerState;
 class Texture;
 class PixelShader;
 class VertexShader;
@@ -14,11 +17,10 @@ class Graphics;
 class Game
 {
 public :
-	Game();
+	Game(HWND hwnd);
 	~Game();
 
-public :
-	void Init(HWND hwnd);
+	void Init();
 	void Update();
 	void Render();
 
@@ -26,36 +28,6 @@ private :
 	HWND _hwnd;
 
 	shared_ptr<Graphics> _graphics;
-
-private :
-	shared_ptr<Geometry<VertexTextureData>> _geometry;
-	shared_ptr<VertexBuffer> _vertexBuffer;
-	shared_ptr<IndexBuffer> _indexBuffer;
-	shared_ptr<InputLayout> _inputLayout;
-
-	shared_ptr<VertexShader> _vertexShader;
-
-	// RS
-	ComPtr<ID3D11RasterizerState> _rasterizerState;
-
-	void CreateRasterizerState();
-
-	shared_ptr<PixelShader> _pixelShader;
-	shared_ptr<Texture> _texture1;
-	shared_ptr<Texture> _texture2;
-
-	ComPtr<ID3D11SamplerState> _samplerState;
-	ComPtr<ID3D11BlendState> _blendState;
-
-	void CreateSamplerState();
-	void CreateBlendState();
-
-private :
-	// SRT 
-	TransformData _transformData;
-	shared_ptr<ConstantBuffer<TransformData>> _constantBuffer;
-	Vec3 _localPosition = {0.f, 0.f, 0.f};
-	Vec3 _localRotation = {0.f, 0.f, 0.f};
-	Vec3 _localScale = {1.f, 1.f, 1.f};
-
+	shared_ptr<Pipeline> _pipeline;
+	shared_ptr<GameObject> _gameObject;
 };

@@ -45,6 +45,9 @@
     <Filter Include="Source Files\00. Engine\Pipeline\05. OutputMerger">
       <UniqueIdentifier>{0be2f9ab-f0a7-4e9d-907c-b223b1175090}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\00. Engine\GameObject">
+      <UniqueIdentifier>{a315864a-5f3f-4256-b26b-373426c30f99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -89,7 +92,7 @@
     <ClInclude Include="InputLayout.h">
       <Filter>Source Files\00. Engine\Pipeline\01. InputAssembler</Filter>
     </ClInclude>
-    <ClInclude Include="Geomertyelper.h">
+    <ClInclude Include="GeometryHelper.h">
       <Filter>Source Files\00. Engine\Pipeline\00. Geometry</Filter>
     </ClInclude>
     <ClInclude Include="Geometry.h">
@@ -104,7 +107,24 @@
     <ClInclude Include="ConstantBuffer.h">
       <Filter>Source Files\00. Engine\Pipeline\02. VertexShader</Filter>
     </ClInclude>
-    <ClInclude Include="Texture.h" />
+    <ClInclude Include="SamplerState.h">
+      <Filter>Source Files\00. Engine\Pipeline\03. Rasterizer</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Source Files\00. Engine\Pipeline\04. PixelShader</Filter>
+    </ClInclude>
+    <ClInclude Include="BlendState.h">
+      <Filter>Source Files\00. Engine\Pipeline\05. OutputMerger</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterizerState.h">
+      <Filter>Source Files\00. Engine\Pipeline\04. PixelShader</Filter>
+    </ClInclude>
+    <ClInclude Include="Pipeline.h">
+      <Filter>Source Files\00. Engine\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Source Files\00. Engine\GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameCoding.rc">
@@ -144,7 +164,7 @@
     <ClCompile Include="VertexBuffer.cpp">
       <Filter>Source Files\00. Engine\Pipeline\01. InputAssembler</Filter>
     </ClCompile>
-    <ClCompile Include="Geomertyelper.cpp">
+    <ClCompile Include="GeometryHelper.cpp">
       <Filter>Source Files\00. Engine\Pipeline\00. Geometry</Filter>
     </ClCompile>
     <ClCompile Include="Geometry.cpp">
@@ -159,18 +179,36 @@
     <ClCompile Include="ConstantBuffer.cpp">
       <Filter>Source Files\00. Engine\Pipeline\02. VertexShader</Filter>
     </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="SamplerState.cpp">
+      <Filter>Source Files\00. Engine\Pipeline\03. Rasterizer</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <FxCompile Include="Default.hlsl">
-      <Filter>Source Files\98. Shaders</Filter>
-    </FxCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\00. Engine\Pipeline\04. PixelShader</Filter>
+    </ClCompile>
+    <ClCompile Include="BlendState.cpp">
+      <Filter>Source Files\00. Engine\Pipeline\05. OutputMerger</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterizerState.cpp">
+      <Filter>Source Files\00. Engine\Pipeline\04. PixelShader</Filter>
+    </ClCompile>
+    <ClCompile Include="Pipeline.cpp">
+      <Filter>Source Files\00. Engine\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\00. Engine\GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SimpleMath.inl">
       <Filter>Source Files\99. Headers\Utils</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Color.hlsl">
+      <Filter>Source Files\98. Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Default.hlsl">
+      <Filter>Source Files\98. Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

@@ -130,17 +130,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BlendState.h" />
     <ClInclude Include="ConstantBuffer.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCoding.h" />
-    <ClInclude Include="Geomertyelper.h" />
+    <ClInclude Include="GeometryHelper.h" />
     <ClInclude Include="Geometry.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="InputLayout.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Pipeline.h" />
+    <ClInclude Include="RasterizerState.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SamplerState.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SimpleMath.h" />
     <ClInclude Include="Struct.h" />
@@ -152,17 +157,22 @@
     <ClInclude Include="VertexData.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BlendState.cpp" />
     <ClCompile Include="ConstantBuffer.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameCoding.cpp" />
-    <ClCompile Include="Geomertyelper.cpp" />
+    <ClCompile Include="GeometryHelper.cpp" />
     <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="IndexBuffer.cpp" />
     <ClCompile Include="InputLayout.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Pipeline.cpp" />
+    <ClCompile Include="RasterizerState.cpp" />
+    <ClCompile Include="SamplerState.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="SimpleMath.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -177,19 +187,19 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Default.hlsl">
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
-      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS</EntryPointName>
-      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DisableOptimizations>
-      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableDebuggingInformation>
-    </FxCompile>
+    <None Include="SimpleMath.inl" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SimpleMath.inl" />
+    <FxCompile Include="Color.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Default.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
