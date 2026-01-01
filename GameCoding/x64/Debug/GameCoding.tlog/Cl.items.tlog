@@ -1,4 +1,5 @@
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\BlendState.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\BlendState.obj
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Component.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Component.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\ConstantBuffer.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\ConstantBuffer.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Game.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Game.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\GameCoding.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\GameCoding.obj
@@ -15,5 +16,6 @@ D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\SamplerState.cpp;D:\Dev\Pr
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Shader.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Shader.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\SimpleMath.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\SimpleMath.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Texture.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Texture.obj
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Transform.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\Transform.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\VertexBuffer.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\VertexBuffer.obj
 D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\VertexData.cpp;D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\x64\Debug\VertexData.obj

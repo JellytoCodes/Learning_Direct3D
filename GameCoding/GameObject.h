@@ -2,6 +2,7 @@
 #include "ConstantBuffer.h"
 #include "Geometry.h"
 
+class Transform;
 struct VertexColorData;
 class Pipeline;
 struct VertexTextureData;
@@ -49,8 +50,7 @@ private :
 	TransformData _transformData;
 	shared_ptr<ConstantBuffer<TransformData>> _constantBuffer;
 
-	Vec3 _localPosition = {0.f, 0.f, 0.f};
-	Vec3 _localRotation = {0.f, 0.f, 0.f};
-	Vec3 _localScale = {1.f, 1.f, 1.f};
+	shared_ptr<Transform> _transform;
+	shared_ptr<Transform> _parent;
 };
 

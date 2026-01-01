@@ -48,6 +48,9 @@
     <Filter Include="Source Files\00. Engine\GameObject">
       <UniqueIdentifier>{a315864a-5f3f-4256-b26b-373426c30f99}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\00. Engine\Component">
+      <UniqueIdentifier>{2e91496e-a393-4d9a-a7ff-275fff466741}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -125,6 +128,12 @@
     <ClInclude Include="GameObject.h">
       <Filter>Source Files\00. Engine\GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Source Files\00. Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Source Files\00. Engine\GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameCoding.rc">
@@ -195,6 +204,12 @@
       <Filter>Source Files\00. Engine\Pipeline</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\00. Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\00. Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
       <Filter>Source Files\00. Engine\GameObject</Filter>
     </ClCompile>
   </ItemGroup>

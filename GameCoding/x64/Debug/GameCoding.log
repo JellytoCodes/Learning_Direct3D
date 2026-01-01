@@ -1,2 +1,13 @@
-﻿  GameCoding.cpp
+﻿  GameObject.cpp
+  Transform.cpp
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Transform.cpp(31,23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/Transform.cpp')
+  
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Transform.cpp(36,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/Transform.cpp')
+  
+D:\Dev\Programming_Study\Learning_Direct3D\GameCoding\Transform.cpp(41,23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/Transform.cpp')
+  
+  Generating Code...
   GameCoding.vcxproj -> D:\Dev\Programming_Study\Learning_Direct3D\Binaries\GameCoding.exe

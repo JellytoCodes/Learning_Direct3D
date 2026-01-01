@@ -11,10 +11,13 @@
 #include "Pipeline.h"
 #include "VertexData.h"
 #include "Shader.h"
+#include "Transform.h"
 
 GameObject::GameObject(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> deviceContext)
 	: _device(device), _deviceContext(deviceContext)
 {
+	_transform = make_shared<Transform>();
+	_parent = make_shared<Transform>();
 	_geometry = make_shared<Geometry<VertexTextureData>>();
 	GeometryHelper::CreateRectangle(_geometry);
 
@@ -50,6 +53,9 @@ GameObject::GameObject(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> 
 
 	_samplerState = make_shared<SamplerState>(device);
 	_samplerState->Create();
+
+	_parent->AddChild(_transform);
+	_transform->SetParent(_parent);
 }
 
 GameObject::~GameObject()
@@ -59,17 +65,11 @@ GameObject::~GameObject()
 
 void GameObject::Update()
 {
-	// Scale Rotation Translation
-	Matrix matScale = Matrix::CreateScale(_localScale);
+	Vec3 pos = _parent->GetPosition();
+	pos.x += 0.001f;
+	_parent->SetPosition(pos);
 
-	Matrix matRotation = Matrix::CreateRotationX(_localRotation.x);
-	matRotation = Matrix::CreateRotationY(_localRotation.y);
-	matRotation = Matrix::CreateRotationZ(_localRotation.z);
-
-	Matrix matTranslation = Matrix::CreateTranslation(_localPosition);
-
-	Matrix matWorld = matScale * matRotation * matTranslation; // SRT
-	_transformData.matWorld = matWorld;
+	_transformData.matWorld = _transform->GetWorldMatrix();
 
 	_constantBuffer->CopyData(_transformData);
 }
