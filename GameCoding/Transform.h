@@ -3,12 +3,16 @@
 
 class Transform : public Component
 {
+	using Super = Component;
 public :
 	Transform();
 	~Transform();
 
-	void Init() override;
-	void Update() override;
+	virtual void Start() override;
+	virtual void Awake() override;
+	virtual void Update() override;
+	virtual void LateUpdate() override;
+	virtual void FixedUpdate() override;
 
 	// Local
 	Vec3 GetLocalScale() const { return _localScale; }
@@ -29,6 +33,10 @@ public :
 
 	Vec3 GetPosition() const { return _position; }
 	void SetPosition(const Vec3& position);
+
+	Vec3 GetRight() { return _matWorld.Right(); }
+	Vec3 GetUp() { return _matWorld.Up(); }
+	Vec3 GetLook() { return _matWorld.Backward(); }
 	
 	void UpdateTransform();
 
@@ -41,7 +49,7 @@ public :
 	shared_ptr<Transform> GetParent() { return _parent; }
 	void SetParent(shared_ptr<Transform> parent) { _parent = parent; }
 
-	const vector<shared_ptr<Transform>>& GetChiledren() { return _children; }
+	const vector<shared_ptr<Transform>>& GetChildren() { return _children; }
 	void AddChild(shared_ptr<Transform> child) { _children.push_back(child); }
 
 private :
@@ -64,4 +72,3 @@ private :
 	shared_ptr<Transform> _parent;
 	vector<shared_ptr<Transform>> _children;
 };
-

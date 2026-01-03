@@ -12,11 +12,15 @@ struct VS_OUTPUT
 	
 };
 
-cbuffer TransformData : register(b0)
+cbuffer CameraData : register(b0)
 {
-	row_major matrix matWorld;
 	row_major matrix matView;
 	row_major matrix matProjection;
+}
+
+cbuffer TransformData : register(b1)
+{
+	row_major matrix matWorld;
 }
 
 // 위치와 관련된 변화
@@ -36,6 +40,7 @@ VS_OUTPUT VS(VS_INPUT input)
 
 Texture2D texture0 : register(t0);
 Texture2D texture1 : register(t1);
+
 SamplerState sampler0 : register(s0);
 
 // 색상과 관련된 변화
