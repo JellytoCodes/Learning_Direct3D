@@ -1,0 +1,29 @@
+#pragma once
+#include "Animation.h"
+#include "Component.h"
+
+class Animation;
+
+class Animator : public Component
+{
+	using Super = Component;
+
+public :
+	Animator();
+	virtual ~Animator();
+
+	void Init();
+	void Update();
+
+	shared_ptr<Animation> GetCurrentAnimation() { return _currentAnimation; }
+	const Keyframe& GetCurrentKeyframe() { return _currentAnimation->GetKeyframe(_currentKeyframeIndex); }
+
+	void SetAnimation(shared_ptr<Animation> animation) { _currentAnimation = animation; }
+
+private :
+	float _sumTime = 0.f;
+
+	int32 _currentKeyframeIndex = 0;
+	shared_ptr<Animation> _currentAnimation;
+};
+

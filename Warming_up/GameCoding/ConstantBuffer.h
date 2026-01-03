@@ -1,0 +1,57 @@
+#pragma once
+
+#include "RenderHelper.h"
+
+template<typename T>
+class ConstantBuffer
+{
+public :
+	ConstantBuffer(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> deviceContext);
+	~ConstantBuffer();
+	ComPtr<ID3D11Buffer> GetComPtr() { return _constantBuffer; }
+
+	void Create();
+	void CopyData(const T& data);
+private :
+	ComPtr<ID3D11Device> _device;
+	ComPtr<ID3D11DeviceContext> _deviceContext;
+	ComPtr<ID3D11Buffer> _constantBuffer;
+};
+
+template<typename T>
+::ConstantBuffer<T>::ConstantBuffer(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> deviceContext)
+	: _device(device), _deviceContext(deviceContext)
+{
+	
+}
+
+template<typename T>
+::ConstantBuffer<T>::~ConstantBuffer()
+{
+
+}
+
+template <typename T>
+void ConstantBuffer<T>::Create()
+{
+	D3D11_BUFFER_DESC desc;
+	ZeroMemory(&desc, sizeof(D3D11_BUFFER_DESC));
+	desc.Usage = D3D11_USAGE_DYNAMIC; // CPU_Write + GPU_Read
+	desc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+	desc.ByteWidth = sizeof(TransformData);
+	desc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
+
+	HRESULT hr = _device->CreateBuffer(&desc, nullptr, _constantBuffer.GetAddressOf());
+	CHECK(hr);
+}
+
+template <typename T>
+void ConstantBuffer<T>::CopyData(const T& data)
+{
+	D3D11_MAPPED_SUBRESOURCE subResource;
+	ZeroMemory(&subResource, sizeof(D3D11_MAPPED_SUBRESOURCE));
+
+	_deviceContext->Map(_constantBuffer.Get(), 0, D3D11_MAP_WRITE_DISCARD, 0, &subResource);
+	::memcpy(subResource.pData, &data, sizeof(data));
+	_deviceContext->Unmap(_constantBuffer.Get(), 0);
+}

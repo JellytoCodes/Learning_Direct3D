@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\Dev\Programming_Study\Learning_Direct3D\Binaries\GameCoding.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>D:\Dev\Programming_Study\Learning_Direct3D\Binaries\Color.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\Dev\Programming_Study\Learning_Direct3D\Binaries\Default.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
