@@ -11,7 +11,7 @@ Mesh::~Mesh()
 {
 
 }
-/*
+
 void Mesh::CreateQuad()
 {
 	_geometry = make_shared<Geometry<VertexTextureNormalData>>();
@@ -46,4 +46,4 @@ void Mesh::CreateBuffers()
 	_vertexBuffer->Create(_geometry->GetVertices());
 	_indexBuffer = make_shared<IndexBuffer>();
 	_indexBuffer->Create(_geometry->GetIndices());
-}*/
+}

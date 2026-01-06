@@ -2,16 +2,18 @@ matrix World;
 matrix View;
 matrix Projection;
 
+Texture2D Texture0;
+
 struct VertexInput
 {
 	float4 position : POSITION;
-	float4 color : COLOR;
+	float2 uv : TEXCOORD;
 };
 
 struct VertexOutput
 {
 	float4 position : SV_POSITION;
-	float4 color : COLOR;
+	float2 uv : TEXCOORD;
 };
 
 VertexOutput VS(VertexInput input)
@@ -22,14 +24,23 @@ VertexOutput VS(VertexInput input)
 	output.position = mul(output.position, View);
 	output.position = mul(output.position, Projection);
 
-	output.color = input.color;
+	output.uv = input.uv;
 
 	return output;
 }
 
+// Filter = 확대/축소 일어났을 떄 중간값을 처리하는 방식
+// Address = UV가 1보다 컸을 떄, 나머지 부분을 어떻게 처리할지
+
+SamplerState Sampler0
+{
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
 float4 PS(VertexOutput input) : SV_TARGET
 {
-	return input.color;
+	return Texture0.Sample(Sampler0, input.uv);
 }
 
 RasterizerState FillModeWireFrame
@@ -44,7 +55,7 @@ technique11 T0
 		SetVertexShader(CompileShader(vs_5_0, VS()));
 		SetPixelShader(CompileShader(ps_5_0, PS()));
 	}
-
+	
 	pass P1
 	{
 		SetRasterizerState(FillModeWireFrame);

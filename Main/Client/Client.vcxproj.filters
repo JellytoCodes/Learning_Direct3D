@@ -17,6 +17,9 @@
     <Filter Include="Main\Camera">
       <UniqueIdentifier>{17255cef-cd55-4ee8-91d1-4b42ac8a888a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\5W">
+      <UniqueIdentifier>{dd372e47-1817-4f79-8e77-0c914ad93909}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -25,20 +28,35 @@
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="TriangleDemo.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="QuadDemo.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="ConstantBufferDemo.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="CameraDemo.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="CameraScript.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraDemo.cpp">
+      <Filter>Game\5W</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantBufferDemo.cpp">
+      <Filter>Game\5W</Filter>
+    </ClCompile>
+    <ClCompile Include="HeightMapDemo.cpp">
+      <Filter>Game\5W</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshDemo.cpp">
+      <Filter>Game\5W</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalDemo.cpp">
+      <Filter>Game\5W</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadDemo.cpp">
+      <Filter>Game\5W</Filter>
+    </ClCompile>
+    <ClCompile Include="SamplerDemo.cpp">
+      <Filter>Game\5W</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureDemo.cpp">
+      <Filter>Game\5W</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleDemo.cpp">
+      <Filter>Game\5W</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,19 +66,36 @@
     <ClInclude Include="Main.h">
       <Filter>Main</Filter>
     </ClInclude>
-    <ClInclude Include="TriangleDemo.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="QuadDemo.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="ConstantBufferDemo.h">
-      <Filter>Game</Filter>
+    <ClInclude Include="CameraScript.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="CameraDemo.h">
-      <Filter>Game</Filter>
+      <Filter>Game\5W</Filter>
     </ClInclude>
-    <ClInclude Include="CameraScript.h" />
+    <ClInclude Include="ConstantBufferDemo.h">
+      <Filter>Game\5W</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightMapDemo.h">
+      <Filter>Game\5W</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshDemo.h">
+      <Filter>Game\5W</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalDemo.h">
+      <Filter>Game\5W</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadDemo.h">
+      <Filter>Game\5W</Filter>
+    </ClInclude>
+    <ClInclude Include="SamplerDemo.h">
+      <Filter>Game\5W</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureDemo.h">
+      <Filter>Game\5W</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleDemo.h">
+      <Filter>Game\5W</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shaders\Triangle.fx">
@@ -72,7 +107,16 @@
     <FxCompile Include="..\Shaders\ConstantBuffer.fx">
       <Filter>Shaders</Filter>
     </FxCompile>
+    <FxCompile Include="..\Shaders\Texture.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\Sampler.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
     <FxCompile Include="..\Shaders\World.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\Normal.fx">
       <Filter>Shaders</Filter>
     </FxCompile>
   </ItemGroup>

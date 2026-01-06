@@ -10,16 +10,16 @@ public:
     Mesh();
     virtual ~Mesh();
 
-	//void CreateQuad();
-	//void CreateCube();
-	//void CreateGrid(int32 sizeX, int32 sizeZ);
-	//void CreateSphere();
+	void CreateQuad();
+	void CreateCube();
+	void CreateGrid(int32 sizeX, int32 sizeZ);
+	void CreateSphere();
 
 	shared_ptr<VertexBuffer> GetVertexBuffer() { return _vertexBuffer; }
 	shared_ptr<IndexBuffer> GetIndexBuffer() { return _indexBuffer; }
 
 private:
-	//void CreateBuffers();
+	void CreateBuffers();
 
 private:
 	// Mesh

@@ -32,9 +32,9 @@ void CameraDemo::Update()
 
 void CameraDemo::Render()
 {
-	_shader->GetMatrix("World")->SetMatrix((float*)&_world);
-	_shader->GetMatrix("View")->SetMatrix((float*)&Camera::S_MatView);
-	_shader->GetMatrix("Projection")->SetMatrix((float*)&Camera::S_MatProjection);
+	_shader->GetMatrix("World")->SetMatrix(reinterpret_cast<const float*>(&_world));
+	_shader->GetMatrix("View")->SetMatrix(reinterpret_cast<const float*>(&Camera::S_MatView));
+	_shader->GetMatrix("Projection")->SetMatrix(reinterpret_cast<const float*>(&Camera::S_MatProjection));
 
 	uint32 stride = _vertexBuffer->GetStride();
 	uint32 offset = _vertexBuffer->GetOffset();

@@ -115,7 +115,7 @@
       <Filter>04. Component</Filter>
     </ClCompile>
     <ClCompile Include="Mesh.cpp">
-      <Filter>04. Component</Filter>
+      <Filter>00. Engine\Resource</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +210,7 @@
       <Filter>04. Component</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
-      <Filter>04. Component</Filter>
+      <Filter>00. Engine\Resource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
