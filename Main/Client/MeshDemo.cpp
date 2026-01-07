@@ -11,7 +11,7 @@ void MeshDemo::Init()
 	_camera->GetOrAddTransform();
 	_camera->AddComponent(make_shared<Camera>());
 	_camera->AddComponent(make_shared<CameraScript>());
-	_camera->GetTransform()->SetPosition(Vec3(0.f, 0.f, -5.f));
+	_camera->GetTransform()->SetPosition(Vec3(0.f, 0.f, -4.f));
 	_camera->GetTransform()->SetRotation(Vec3(0.f, 0.f, 0.f));
 
 	_obj = make_shared<GameObject>();

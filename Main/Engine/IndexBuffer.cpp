@@ -1,16 +1,6 @@
 #include "pch.h"
 #include "IndexBuffer.h"
 
-IndexBuffer::IndexBuffer()
-{
-
-}
-
-IndexBuffer::~IndexBuffer()
-{
-
-}
-
 void IndexBuffer::Create(const vector<uint32>& indices)
 {
 	_stride = sizeof(uint32);
