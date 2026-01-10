@@ -17,7 +17,6 @@ Texture2D Texture0;
 
 float4 PS(VertexOutput input) : SV_TARGET
 {
-	// ³»Àû (Dot Product)
 	return Texture0.Sample(LinearSampler, input.uv);
 }
 

@@ -33,7 +33,6 @@ private:
 	// DSV
 	ComPtr<ID3D11Texture2D>			_depthStencilTexture;
 	ComPtr<ID3D11DepthStencilView>	_depthStencilView;
-	
 
 	// Misc
 	D3D11_VIEWPORT					_viewport = { 0 };

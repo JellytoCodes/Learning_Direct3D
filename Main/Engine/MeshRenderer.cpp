@@ -2,6 +2,7 @@
 #include "MeshRenderer.h"
 #include "Camera.h"
 #include "Game.h"
+#include "Material.h"
 #include "Mesh.h"
 #include "Shader.h"
 
@@ -17,9 +18,12 @@ MeshRenderer::~MeshRenderer()
 
 void MeshRenderer::Update()
 {
-	if (_mesh == nullptr || _texture == nullptr || _shader == nullptr) return;
+	if (_mesh == nullptr || _material == nullptr) return;
 
-	_shader->GetSRV("Texture0")->SetResource(_texture->GetComPtr().Get());
+	auto _shader = _material->GetShader();
+	if (_shader == nullptr) return;
+
+	_material->Update();
 
 	auto world = GetTransform()->GetWorldMatrix();
 	RENDER->PushTransformData(TransformDesc{world});

@@ -5,6 +5,7 @@
 class Shader;
 class Texture;
 class Mesh;
+class Material;
 
 class ResourceManager
 {
@@ -83,10 +84,9 @@ shared_ptr<T> ResourceManager::Get(const wstring& key)
 template<typename T>
 ResourceType ResourceManager::GetResourceType()
 {
-	if (std::is_same_v<T, Texture>)
-		return ResourceType::Texture;
-	if (std::is_same_v<T, Mesh>)
-		return ResourceType::Mesh;
+	if (std::is_same_v<T, Texture>)		return ResourceType::Texture;
+	if (std::is_same_v<T, Mesh>)		return ResourceType::Mesh;
+	if (std::is_same_v<T, Material>)	return ResourceType::Material;
 
 	assert(false);
 	return ResourceType::None;

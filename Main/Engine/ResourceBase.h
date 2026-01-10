@@ -9,7 +9,7 @@ enum class ResourceType : uint8
 	Material,
 	Animation,
 
-	End
+	End,
 };
 
 enum
