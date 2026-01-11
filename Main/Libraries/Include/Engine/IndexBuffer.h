@@ -14,10 +14,10 @@ public:
 	void Create(const vector<uint32>& indices);
 
 private:
-	ComPtr<ID3D11Buffer> _indexBuffer;
+	ComPtr<ID3D11Buffer>	_indexBuffer;
 
-	uint32 _stride	= 0;
-	uint32 _offset	= 0;
-	uint32 _count	= 0;
+	uint32					_stride	= 0;
+	uint32					_offset	= 0;
+	uint32					_count	= 0;
 };
 

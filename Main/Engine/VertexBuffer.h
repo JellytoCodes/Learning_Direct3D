@@ -15,11 +15,11 @@ public:
 	void Create(const vector<T>& vertices);
 
 private:
-	ComPtr<ID3D11Buffer> _vertexBuffer;
+	ComPtr<ID3D11Buffer>	_vertexBuffer;
 
-	uint32 _stride	= 0;
-	uint32 _offset	= 0;
-	uint32 _count	= 0;
+	uint32					_stride	= 0;
+	uint32					_offset	= 0;
+	uint32					_count	= 0;
 };
 
 template <typename T>

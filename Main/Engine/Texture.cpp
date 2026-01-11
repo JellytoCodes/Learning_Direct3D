@@ -20,7 +20,7 @@ void Texture::Load(const wstring& path)
 	hr = ::CreateShaderResourceView(DEVICE.Get(), _img.GetImages(), _img.GetImageCount(), md, _shaderResourveView.GetAddressOf());
 	CHECK(hr);
 	
-	_size.x = md.width;
-	_size.y = md.height;
+	_size.x = static_cast<float>(md.width);
+	_size.y = static_cast<float>(md.height);
 }
 

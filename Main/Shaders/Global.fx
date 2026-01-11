@@ -10,6 +10,7 @@ cbuffer GlobalBuffer
 	matrix V;			// View
 	matrix P;			// Projection
 	matrix VP;			// View*Projection
+	matrix VInv;
 };
 
 cbuffer TransformBuffer
@@ -23,26 +24,34 @@ cbuffer TransformBuffer
 
 struct Vertex
 {
-	float4 position : POSITION;
+	float4 position		: POSITION;
 };
 
 struct VertexTexture
 {
-	float4 position : POSITION;
-	float2 uv : TEXCOORD;
+	float4 position		: POSITION;
+	float2 uv			: TEXCOORD;
 };
 
 struct VertexColor
 {
-	float4 position : POSITION;
-	float4 Color : COLOR;
+	float4 position		: POSITION;
+	float4 Color		: COLOR;
 };
 
 struct VertexTextureNormal
 {
-	float4 position : POSITION;
-	float2 uv : TEXCOORD;
-	float3 normal : NORNAL;
+	float4 position		: POSITION;
+	float2 uv			: TEXCOORD;
+	float3 normal		: NORNAL;
+};
+
+struct VertexTextureNormalTangent
+{
+	float4 position		: POSITION;
+	float2 uv			: TEXCOORD;
+	float3 normal		: NORNAL;
+	float3 tangent		: TANGENT;
 };
 
 ///////////////////
@@ -62,6 +71,7 @@ struct MeshOutput
 	float3 worldPosition	: POSITION1;
 	float2 uv				: TEXCOORD;
 	float3 normal			: NORMAL;
+	float3 tangent			: TANGENT;
 };
 
 ///////////////////
@@ -102,13 +112,21 @@ pass name											\
 	SetPixelShader(CompileShader(ps_5_0, ps()));	\
 }													\
 
+#define PASS_RS_VP(name, rs, vs, ps)				\
+pass name											\
+{													\
+	SetRasterizerState(rs);							\
+	SetVertexShader(CompileShader(vs_5_0, vs()));	\
+	SetPixelShader(CompileShader(ps_5_0, ps()));	\
+}													\
+
 //////////////
 // Function //
 //////////////
 
 float3 CameraPosition()
 {
-	return -V._41_42_43;
+	return -VInv._41_42_43;
 }
 
 #endif

@@ -6,8 +6,8 @@ struct GameDesc
 	wstring appName = L"GameCoding";
 	HINSTANCE hInstance = 0;
 	HWND hWnd = 0;
-	float width = 800;
-	float height = 600;
+	UINT width = 800;
+	UINT height = 600;
 	bool vsync = false;
 	bool windowed = true;
 	Color clearColor = Color(0.5f, 0.5f, 0.5f, 0.5f);

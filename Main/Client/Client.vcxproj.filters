@@ -32,6 +32,9 @@
     <Filter Include="Shaders\Common">
       <UniqueIdentifier>{d3ba7a2a-506f-4b0d-8ee5-288b60cc3dbb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shaders\Week3">
+      <UniqueIdentifier>{9802a134-3003-4845-809a-8184cf394cf4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -92,6 +95,9 @@
       <Filter>Game\Week2</Filter>
     </ClCompile>
     <ClCompile Include="MaterialDemo.cpp">
+      <Filter>Game\Week2</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalMappingDemo.cpp">
       <Filter>Game\Week2</Filter>
     </ClCompile>
   </ItemGroup>
@@ -156,6 +162,9 @@
     <ClInclude Include="MaterialDemo.h">
       <Filter>Game\Week2</Filter>
     </ClInclude>
+    <ClInclude Include="NormalMappingDemo.h">
+      <Filter>Game\Week2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shaders\World.fx">
@@ -202,6 +211,12 @@
     </FxCompile>
     <FxCompile Include="..\Shaders\Light.fx">
       <Filter>Shaders\Common</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\NormalMapping.fx">
+      <Filter>Shaders\Week2</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\ModelDemo.fx">
+      <Filter>Shaders\Week3</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

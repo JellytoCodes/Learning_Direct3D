@@ -22,16 +22,16 @@ public:
 	template<typename T>
 	shared_ptr<T> Get(const wstring& key);
 
+	shared_ptr<Texture> GetOrAddTexture(const wstring& key, const wstring& path);
+
 	template<typename T>
 	ResourceType GetResourceType();
 
 private:
 	void CreateDefaultMesh();
 
-private:
 	wstring _resourcePath;
 
-private:
 	using KeyObjMap = map<wstring/*key*/, shared_ptr<ResourceBase>>;
 	array<KeyObjMap, RESOURCE_TYPE_COUNT> _resources;
 };
