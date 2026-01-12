@@ -16,11 +16,22 @@
     <ClInclude Include="Converter.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="AsTypes.h" />
     <ClInclude Include="StaticMeshDemo.h">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="ImGUIDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="AsTypes.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TweenDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyDemo.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
@@ -40,11 +51,22 @@
     <ClCompile Include="Converter.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="AsTypes.cpp" />
     <ClCompile Include="StaticMeshDemo.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="ImGUIDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="AsTypes.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="TweenDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyDemo.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>

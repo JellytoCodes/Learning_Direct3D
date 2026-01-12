@@ -1,7 +1,7 @@
 #include "Global.fx"
 #include "Light.fx"
 
-#define MAX_MODEL_TRANSFORM 50
+#define MAX_MODEL_TRANSFORM 250
 
 cbuffer BoneBuffer
 {

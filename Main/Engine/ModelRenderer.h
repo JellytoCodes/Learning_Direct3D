@@ -17,6 +17,7 @@ public :
 
 	void SetModel(shared_ptr<Model> model);
 	void SetPass(uint8 pass) { _pass = pass; }
+
 private :
 	shared_ptr<Shader>	_shader;
 	uint8				_pass = 0;

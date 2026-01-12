@@ -20,7 +20,7 @@ void ModelRenderer::Update()
 	if (_model == nullptr) return;
 
 	// Bones
-	Bonedesc boneDesc;
+	BoneDesc boneDesc;
 	const uint32 boneCount = _model->GetBoneCount();
 
 	for (uint32 i = 0 ; i < boneCount ; i++)
