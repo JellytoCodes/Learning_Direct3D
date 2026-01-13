@@ -3,13 +3,14 @@
 class GameObject;
 class Transform;
 
-enum class ComponentType : uint8
+enum class ComponentType : int8
 {
 	Transform,
 	MeshRenderer,
 	ModelRenderer,
 	Camera,
 	Animator,
+	Light,
 	// ...
 	Script,
 

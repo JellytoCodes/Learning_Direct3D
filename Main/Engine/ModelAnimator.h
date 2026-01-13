@@ -20,10 +20,15 @@ public :
 	ModelAnimator(shared_ptr<Shader> shader);
 	virtual ~ModelAnimator();
 
-	virtual void Update() override;
-
 	void SetModel(shared_ptr<Model> model);
 	void SetPass(uint8 pass) { _pass = pass; }
+
+	virtual void Update() override;
+	void UpdateTweenData();
+
+	void RenderInstancing(shared_ptr<InstancingBuffer>& buffer);
+	InstanceID GetInstanceID();
+	TweenDesc& GetTweenDesc() { return _tweenDesc; }
 
 private :
 	void CreateTexture();
@@ -37,7 +42,6 @@ private :
 	uint8					_pass = 0;
 	shared_ptr<Model>		_model;
 
-	KeyframeDesc	_keyframeDesc;
 	TweenDesc		_tweenDesc;
 };
 

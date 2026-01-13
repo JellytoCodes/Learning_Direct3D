@@ -35,6 +35,12 @@
     <Filter Include="Shaders\Week3">
       <UniqueIdentifier>{9802a134-3003-4845-809a-8184cf394cf4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Week4">
+      <UniqueIdentifier>{e7b68d68-c922-4109-8574-989ecf86c45e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Week4">
+      <UniqueIdentifier>{0a8e0e02-1f49-46c0-a083-7c3ed48736ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -99,6 +105,24 @@
     </ClCompile>
     <ClCompile Include="NormalMappingDemo.cpp">
       <Filter>Game\Week2</Filter>
+    </ClCompile>
+    <ClCompile Include="InstancingDemo.cpp">
+      <Filter>Game\Week4</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshInstancingDemo.cpp">
+      <Filter>Game\Week4</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelInstancingDemo.cpp">
+      <Filter>Game\Week4</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimInstancingDemo.cpp">
+      <Filter>Game\Week4</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderDemo.cpp">
+      <Filter>Game\Week4</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDemo.cpp">
+      <Filter>Game\Week4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +189,24 @@
     <ClInclude Include="NormalMappingDemo.h">
       <Filter>Game\Week2</Filter>
     </ClInclude>
+    <ClInclude Include="InstancingDemo.h">
+      <Filter>Game\Week4</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshInstancingDemo.h">
+      <Filter>Game\Week4</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelInstancingDemo.h">
+      <Filter>Game\Week4</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimInstancingDemo.h">
+      <Filter>Game\Week4</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDemo.h">
+      <Filter>Game\Week4</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDemo.h">
+      <Filter>Game\Week4</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shaders\World.fx">
@@ -226,6 +268,24 @@
     </FxCompile>
     <FxCompile Include="..\Shaders\SkyDemo.fx">
       <Filter>Shaders\Week3</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\InstancingDemo.fx">
+      <Filter>Shaders\Week4</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\MeshInstancingDemo.fx">
+      <Filter>Shaders\Week4</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\ModelInstancingDemo.fx">
+      <Filter>Shaders\Week4</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\AnimInstancingDemo.fx">
+      <Filter>Shaders\Week4</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\RenderDemo.fx">
+      <Filter>Shaders\Week4</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\Render.fx">
+      <Filter>Shaders\Common</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

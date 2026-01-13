@@ -39,6 +39,7 @@ struct MaterialDesc
 // Bone
 #define MAX_MODEL_TRANSFORMS 250
 #define MAX_MODEL_KEYFRAMES 500
+#define MAX_MODEL_INSTANCE 500
 
 struct BoneDesc
 {
@@ -84,6 +85,11 @@ struct TweenDesc
 	KeyframeDesc next;
 };
 
+struct InstancedTweenDesc
+{
+	TweenDesc tweens[MAX_MODEL_INSTANCE];
+};
+
 class RenderManager
 {
 	DECLARE_SINGLE(RenderManager);
@@ -98,38 +104,38 @@ public :
 	void PushMaterialData(const MaterialDesc& desc);
 	void PushBoneData(const BoneDesc& desc);
 	void PushKeyframeData(const KeyframeDesc& desc);
-	void PushTweenData(const TweenDesc& desc);
+	void PushTweenData(const InstancedTweenDesc& desc);
 
 private :
 	shared_ptr<Shader> _shader;
 
 	
-	GlobalDesc									_globalDesc;
-	shared_ptr<ConstantBuffer<GlobalDesc>>		_globalBuffer;
-	ComPtr<ID3DX11EffectConstantBuffer>			_globalEffectBuffer;
+	GlobalDesc											_globalDesc;
+	shared_ptr<ConstantBuffer<GlobalDesc>>				_globalBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_globalEffectBuffer;
 
-	TransformDesc								_transformDesc;
-	shared_ptr<ConstantBuffer<TransformDesc>>	_transformBuffer;
-	ComPtr<ID3DX11EffectConstantBuffer>			_transformEffectBuffer;
+	TransformDesc										_transformDesc;
+	shared_ptr<ConstantBuffer<TransformDesc>>			_transformBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_transformEffectBuffer;
 
-	LightDesc									_lightDesc;
-	shared_ptr<ConstantBuffer<LightDesc>>		_lightBuffer;
-	ComPtr<ID3DX11EffectConstantBuffer>			_lightEffectBuffer;
+	LightDesc											_lightDesc;
+	shared_ptr<ConstantBuffer<LightDesc>>				_lightBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_lightEffectBuffer;
 
-	MaterialDesc								_materialDesc;
-	shared_ptr<ConstantBuffer<MaterialDesc>>	_materialBuffer;
-	ComPtr<ID3DX11EffectConstantBuffer>			_materialEffectBuffer;
+	MaterialDesc										_materialDesc;
+	shared_ptr<ConstantBuffer<MaterialDesc>>			_materialBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_materialEffectBuffer;
 
-	BoneDesc									_boneDesc;
-	shared_ptr<ConstantBuffer<BoneDesc>>		_boneBuffer;
-	ComPtr<ID3DX11EffectConstantBuffer>			_boneEffectBuffer;
+	BoneDesc											_boneDesc;
+	shared_ptr<ConstantBuffer<BoneDesc>>				_boneBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_boneEffectBuffer;
 
-	KeyframeDesc								_keyframeDesc;
-	shared_ptr<ConstantBuffer<KeyframeDesc>>	_keyframeBuffer;
-	ComPtr<ID3DX11EffectConstantBuffer>			_keyframeEffectBuffer;
+	KeyframeDesc										_keyframeDesc;
+	shared_ptr<ConstantBuffer<KeyframeDesc>>			_keyframeBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_keyframeEffectBuffer;
 
-	TweenDesc									_tweenDesc;
-	shared_ptr<ConstantBuffer<TweenDesc>>		_tweenBuffer;
-	ComPtr<ID3DX11EffectConstantBuffer>			_tweenEffectBuffer;
+	InstancedTweenDesc									_tweenDesc;
+	shared_ptr<ConstantBuffer<InstancedTweenDesc>>		_tweenBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_tweenEffectBuffer;
 };
 
