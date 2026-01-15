@@ -133,6 +133,15 @@
     <ClCompile Include="RawBufferDemo.cpp">
       <Filter>Game\Week5</Filter>
     </ClCompile>
+    <ClCompile Include="GroupDemo.cpp">
+      <Filter>Game\Week5</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureBufferDemo.cpp">
+      <Filter>Game\Week5</Filter>
+    </ClCompile>
+    <ClCompile Include="StructuredBufferDemo.cpp">
+      <Filter>Game\Week5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -219,6 +228,15 @@
     <ClInclude Include="RawBufferDemo.h">
       <Filter>Game\Week5</Filter>
     </ClInclude>
+    <ClInclude Include="GroupDemo.h">
+      <Filter>Game\Week5</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureBufferDemo.h">
+      <Filter>Game\Week5</Filter>
+    </ClInclude>
+    <ClInclude Include="StructuredBufferDemo.h">
+      <Filter>Game\Week5</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shaders\World.fx">
@@ -300,6 +318,15 @@
       <Filter>Shaders\Common</Filter>
     </FxCompile>
     <FxCompile Include="..\Shaders\RawBufferDemo.fx">
+      <Filter>Shaders\Week5</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\GroupDemo.fx">
+      <Filter>Shaders\Week5</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TextureBufferDemo.fx">
+      <Filter>Shaders\Week5</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\StructuredBufferDemo.fx">
       <Filter>Shaders\Week5</Filter>
     </FxCompile>
   </ItemGroup>

@@ -4,20 +4,21 @@ class RawBuffer
 public :
 	RawBuffer(void* inputData, uint32 inputByte, uint32 outputByte);
 	~RawBuffer();
-	ComPtr<ID3D11ShaderResourceView> GetSRV() { return _srv; }
-	ComPtr<ID3D11UnorderedAccessView> GetUAV() { return _uav; }
 
-	void		CreateBuffer();
+	ComPtr<ID3D11ShaderResourceView>		GetSRV()		{ return _srv; }
+	ComPtr<ID3D11UnorderedAccessView>		GetUAV()		{ return _uav; }
 
-	void		CopyToInput(void* data);
-	void		CopyFromOutput(void* data);
+	void									CreateBuffer();
+
+	void									CopyToInput(void* data);
+	void									CopyFromOutput(void* data);
 
 private :
-	void		CreateInput();
-	void		CreateSRV();
-	void		CreateOutput();
-	void		CreateUAV();
-	void		CreateResult();
+	void									CreateInput();
+	void									CreateSRV();
+	void									CreateOutput();
+	void									CreateUAV();
+	void									CreateResult();
 
 	// ют╥б
 	ComPtr<ID3D11Buffer>				_input;
