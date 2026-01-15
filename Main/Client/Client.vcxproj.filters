@@ -41,6 +41,12 @@
     <Filter Include="Shaders\Week4">
       <UniqueIdentifier>{0a8e0e02-1f49-46c0-a083-7c3ed48736ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Week5">
+      <UniqueIdentifier>{d5cfad9d-bcb6-4b4f-a885-61c247432836}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Week5">
+      <UniqueIdentifier>{8c0a9376-ecb5-46b9-9e04-a39f56cef486}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -123,6 +129,9 @@
     </ClCompile>
     <ClCompile Include="SceneDemo.cpp">
       <Filter>Game\Week4</Filter>
+    </ClCompile>
+    <ClCompile Include="RawBufferDemo.cpp">
+      <Filter>Game\Week5</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +216,9 @@
     <ClInclude Include="SceneDemo.h">
       <Filter>Game\Week4</Filter>
     </ClInclude>
+    <ClInclude Include="RawBufferDemo.h">
+      <Filter>Game\Week5</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shaders\World.fx">
@@ -286,6 +298,9 @@
     </FxCompile>
     <FxCompile Include="..\Shaders\Render.fx">
       <Filter>Shaders\Common</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\RawBufferDemo.fx">
+      <Filter>Shaders\Week5</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

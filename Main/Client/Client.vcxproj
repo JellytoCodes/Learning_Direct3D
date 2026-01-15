@@ -40,6 +40,7 @@
     <ClInclude Include="NormalMappingDemo.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="QuadDemo.h" />
+    <ClInclude Include="RawBufferDemo.h" />
     <ClInclude Include="RenderDemo.h" />
     <ClInclude Include="SamplerDemo.h" />
     <ClInclude Include="SceneDemo.h" />
@@ -71,6 +72,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="QuadDemo.cpp" />
+    <ClCompile Include="RawBufferDemo.cpp" />
     <ClCompile Include="RenderDemo.cpp" />
     <ClCompile Include="SamplerDemo.cpp" />
     <ClCompile Include="SceneDemo.cpp" />
@@ -100,6 +102,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Effect</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
     </FxCompile>
+    <FxCompile Include="..\Shaders\RawBufferDemo.fx" />
     <FxCompile Include="..\Shaders\Render.fx" />
     <FxCompile Include="..\Shaders\RenderDemo.fx" />
     <FxCompile Include="..\Shaders\Sampler.fx" />
