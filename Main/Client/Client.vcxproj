@@ -19,72 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AmbientDemo.h" />
-    <ClInclude Include="AnimInstancingDemo.h" />
-    <ClInclude Include="CameraDemo.h" />
     <ClInclude Include="CameraScript.h" />
-    <ClInclude Include="ConstantBufferDemo.h" />
-    <ClInclude Include="DepthStencilDemo.h" />
-    <ClInclude Include="DiffuseDemo.h" />
-    <ClInclude Include="EmissiveDemo.h" />
-    <ClInclude Include="GlobalTestDemo.h" />
-    <ClInclude Include="GroupDemo.h" />
-    <ClInclude Include="HeightMapDemo.h" />
-    <ClInclude Include="InstancingDemo.h" />
-    <ClInclude Include="LightingDemo.h" />
+    <ClInclude Include="CollisionDemo.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="MaterialDemo.h" />
-    <ClInclude Include="MeshDemo.h" />
-    <ClInclude Include="MeshInstancingDemo.h" />
-    <ClInclude Include="ModelInstancingDemo.h" />
-    <ClInclude Include="NormalDemo.h" />
-    <ClInclude Include="NormalMappingDemo.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="QuadDemo.h" />
-    <ClInclude Include="RawBufferDemo.h" />
-    <ClInclude Include="RenderDemo.h" />
-    <ClInclude Include="SamplerDemo.h" />
-    <ClInclude Include="SceneDemo.h" />
-    <ClInclude Include="SpecularDemo.h" />
-    <ClInclude Include="StructuredBufferDemo.h" />
-    <ClInclude Include="TextureBufferDemo.h" />
-    <ClInclude Include="TextureDemo.h" />
-    <ClInclude Include="TriangleDemo.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AmbientDemo.cpp" />
-    <ClCompile Include="AnimInstancingDemo.cpp" />
-    <ClCompile Include="CameraDemo.cpp" />
     <ClCompile Include="CameraScript.cpp" />
-    <ClCompile Include="ConstantBufferDemo.cpp" />
-    <ClCompile Include="DepthStencilDemo.cpp" />
-    <ClCompile Include="DiffuseDemo.cpp" />
-    <ClCompile Include="EmissiveDemo.cpp" />
-    <ClCompile Include="GlobalTestDemo.cpp" />
-    <ClCompile Include="GroupDemo.cpp" />
-    <ClCompile Include="HeightMapDemo.cpp" />
-    <ClCompile Include="InstancingDemo.cpp" />
-    <ClCompile Include="LightingDemo.cpp" />
+    <ClCompile Include="CollisionDemo.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MaterialDemo.cpp" />
-    <ClCompile Include="MeshDemo.cpp" />
-    <ClCompile Include="MeshInstancingDemo.cpp" />
-    <ClCompile Include="ModelInstancingDemo.cpp" />
-    <ClCompile Include="NormalDemo.cpp" />
-    <ClCompile Include="NormalMappingDemo.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="QuadDemo.cpp" />
-    <ClCompile Include="RawBufferDemo.cpp" />
-    <ClCompile Include="RenderDemo.cpp" />
-    <ClCompile Include="SamplerDemo.cpp" />
-    <ClCompile Include="SceneDemo.cpp" />
-    <ClCompile Include="SpecularDemo.cpp" />
-    <ClCompile Include="StructuredBufferDemo.cpp" />
-    <ClCompile Include="TextureBufferDemo.cpp" />
-    <ClCompile Include="TextureDemo.cpp" />
-    <ClCompile Include="TriangleDemo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shaders\AnimationDemo.fx" />

@@ -1,5 +1,6 @@
 #pragma once
 #include "Pass.h"
+#include "BindShaderDesc.h"
 #include "Technique.h"
 
 struct ShaderDesc
@@ -13,7 +14,6 @@ class Shader
 public:
 	friend struct Pass;
 
-public:
 	Shader(wstring file);
 	~Shader();
 
@@ -43,16 +43,51 @@ public:
 	ComPtr<ID3DX11EffectRasterizerVariable> GetRasterizer(string name);
 	ComPtr<ID3DX11EffectSamplerVariable> GetSampler(string name);
 
+	void PushGlobalData(const Matrix& view, const Matrix& projection);
+	void PushTransformData(const TransformDesc& desc);
+	void PushLightData(const LightDesc& desc);
+	void PushMaterialData(const MaterialDesc& desc);
+	void PushBoneData(const BoneDesc& desc);
+	void PushKeyframeData(const KeyframeDesc& desc);
+	void PushTweenData(const InstancedTweenDesc& desc);
+
 private:
 	void CreateEffect();
 	ComPtr<ID3D11InputLayout> CreateInputLayout(ComPtr<ID3DBlob> fxBlob, D3DX11_EFFECT_SHADER_DESC* effectVsDesc, vector<D3D11_SIGNATURE_PARAMETER_DESC>& params);
 
-private:
 	wstring _file;
 	ShaderDesc _shaderDesc;
 	D3DX11_EFFECT_DESC _effectDesc;
 	shared_ptr<StateBlock> _initialStateBlock;
 	vector<Technique> _techniques;
+
+	GlobalDesc											_globalDesc;
+	shared_ptr<ConstantBuffer<GlobalDesc>>				_globalBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_globalEffectBuffer;
+
+	TransformDesc										_transformDesc;
+	shared_ptr<ConstantBuffer<TransformDesc>>			_transformBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_transformEffectBuffer;
+
+	LightDesc											_lightDesc;
+	shared_ptr<ConstantBuffer<LightDesc>>				_lightBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_lightEffectBuffer;
+
+	MaterialDesc										_materialDesc;
+	shared_ptr<ConstantBuffer<MaterialDesc>>			_materialBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_materialEffectBuffer;
+
+	BoneDesc											_boneDesc;
+	shared_ptr<ConstantBuffer<BoneDesc>>				_boneBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_boneEffectBuffer;
+
+	KeyframeDesc										_keyframeDesc;
+	shared_ptr<ConstantBuffer<KeyframeDesc>>			_keyframeBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_keyframeEffectBuffer;
+
+	InstancedTweenDesc									_tweenDesc;
+	shared_ptr<ConstantBuffer<InstancedTweenDesc>>		_tweenBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer>					_tweenEffectBuffer;
 };
 
 class ShaderManager

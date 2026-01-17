@@ -1,6 +1,8 @@
 #pragma once
 #include "Component.h"
 
+class Terrain;
+class BaseCollider;
 class ModelRenderer;
 class MonoBehaviour;
 class Transform;
@@ -28,6 +30,8 @@ public:
 	shared_ptr<ModelRenderer> GetModelRenderer();
 	shared_ptr<ModelAnimator> GetAnimator();
 	shared_ptr<Light> GetLight();
+	shared_ptr<BaseCollider> GetCollider();
+	shared_ptr<Terrain> GetTerrain();
 
 	shared_ptr<Transform> GetOrAddTransform();
 	void AddComponent(shared_ptr<Component> component);

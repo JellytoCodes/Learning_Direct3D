@@ -15,6 +15,7 @@ public:
 	void CreateGrid(int32 sizeX, int32 sizeZ);
 	void CreateSphere();
 
+	shared_ptr<Geometry<VertexTextureNormalTangentData>> GetGeometry() { return _geometry; }
 	shared_ptr<VertexBuffer> GetVertexBuffer() { return _vertexBuffer; }
 	shared_ptr<IndexBuffer> GetIndexBuffer() { return _indexBuffer; }
 

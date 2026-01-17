@@ -73,7 +73,7 @@ void TextureBufferDemo::Init()
 		CUR_SCENE->Add(obj);
 	}
 
-	RENDER->Init(_shader);
+	//RENDER->Init(_shader);
 }
 
 void TextureBufferDemo::Update()
@@ -99,7 +99,6 @@ ComPtr<ID3D11ShaderResourceView> TextureBufferDemo::MakeComputeShaderTexture()
 	uint32 width = textureBuffer->GetWidth();
 	uint32 height = textureBuffer->GetHeight();
 	uint32 arraySize = textureBuffer->GetArraySize();
-
 
 	uint32 x = max(1, (width + 31) / 32);
 	uint32 y = max(1, (height + 31) / 32);

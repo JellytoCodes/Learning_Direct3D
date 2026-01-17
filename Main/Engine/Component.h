@@ -11,6 +11,8 @@ enum class ComponentType : int8
 	Camera,
 	Animator,
 	Light,
+	Collider,
+	Terrain,
 	// ...
 	Script,
 

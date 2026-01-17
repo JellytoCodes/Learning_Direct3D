@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Main.h"
 
-#include "StructuredBufferDemo.h"
+#include "CollisionDemo.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
@@ -12,8 +12,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	desc.hWnd			= nullptr;
 	desc.width			= 800;
 	desc.height			= 600;
-	desc.clearColor		= Color(0.f, 0.f, 0.f, 0.f);
-	desc.app			= make_shared<StructuredBufferDemo>();
+	desc.clearColor		= Color(0.5f, 0.5f, 0.5f, 0.5f);
+	desc.app			= make_shared<CollisionDemo>();
 
 	GAME->Run(desc);
 
