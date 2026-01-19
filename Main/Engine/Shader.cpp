@@ -370,6 +370,20 @@ void Shader::PushTweenData(const InstancedTweenDesc& desc)
 	_tweenEffectBuffer->SetConstantBuffer(_tweenBuffer->GetComPtr().Get());
 }
 
+void Shader::PushSnowData(const SnowBillboardDesc& desc)
+{
+	if (_snowEffectBuffer == nullptr)
+	{
+		_snowBuffer = make_shared<ConstantBuffer<SnowBillboardDesc>>();
+		_snowBuffer->Create();
+		_snowEffectBuffer = GetConstantBuffer("SnowBuffer");
+	}
+
+	_snowDesc = desc;
+	_snowBuffer->CopyData(_snowDesc);
+	_snowEffectBuffer->SetConstantBuffer(_snowBuffer->GetComPtr().Get());
+}
+
 ComPtr<ID3DX11EffectUnorderedAccessViewVariable> Shader::GetUAV(string name)
 {
 	return _shaderDesc.effect->GetVariableByName(name.c_str())->AsUnorderedAccessView();

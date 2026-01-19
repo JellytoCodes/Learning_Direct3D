@@ -16,28 +16,50 @@ public:
 	
 	virtual void Update() override;
 
+	void SetProjectionType(ProjectionType type) { _type = type; }
+	ProjectionType GetProjectionType() { return _type; }
+
 	void UpdateMatrix();
 
 	void SetNear(float value) { _near = value; }
 	void SetFar(float value) { _far = value; }
 	void SetFOV(float value) { _fov = value; }
-	void SetWidth(UINT value) { _width = value; }
-	void SetHeight(UINT value) { _height = value; }
+	void SetWidth(float value) { _width = value; }
+	void SetHeight(float value) { _height = value; }
 
 	Matrix& GetViewMatrix() { return _matView; }
 	Matrix& GetProjectionMatrix() { return _matProjection; }
 
+	float GetWidth() { return _width; }
+	float GetHeight() { return _height; }
+
+	void SortGameObject();
+	void RenderForward();
+
+	void SetCullingMaskLayerOnOff(uint8 layer, bool on)
+	{
+		if (on) _cullingMask |= (1 << layer);
+		else	_cullingMask &= ~(1 << layer);
+	}
+
+	void SetCullingMaskAll() { SetCullingMask(UINT32_MAX); }
+	void SetCullingMask(uint32 mask) { _cullingMask = mask; }
+	bool IsCulled(uint8 layer) {return (_cullingMask & (1 << layer)) != 0; }
+
+	static Matrix S_MatView;
+	static Matrix S_MatProjection;
+
 private:
+	ProjectionType _type = ProjectionType::Perspective;
 	Matrix _matView = Matrix::Identity;
 	Matrix _matProjection = Matrix::Identity;
 
 	float _near		= 1.f;
 	float _far		= 1000.f;
 	float _fov		= XM_PI / 4.f;
-	UINT _width		= 0;
-	UINT _height	= 0;
+	float _width	= 0;
+	float _height	= 0;
 
-public:
-	static Matrix S_MatView;
-	static Matrix S_MatProjection;
+	uint32 _cullingMask = 0;
+	vector<shared_ptr<GameObject>> _vecForward;
 };

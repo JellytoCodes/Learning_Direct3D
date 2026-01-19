@@ -52,7 +52,26 @@ struct MathUtils
 	static bool OverlapOnAxis(const AABB3D& aabb, const OBB3D& obb, const Vec3& axis);
 	static bool OverlapOnAxis(const OBB3D& obb1, const OBB3D& obb2, const Vec3& axis);
 
-	
+	/**
+	 * RayCast
+	 */
+	static bool Raycast(const Sphere3D& sphere, const Ray3D& ray, OUT float& distance);
+	static bool Raycast(const AABB3D& aabb, const Ray3D& ray, OUT float& distance);
+	static bool Raycast(const Plane3D& plane, const Ray3D& ray, OUT float& distance);
+	static bool Raycast(const Triangle3D& triangle, const Ray3D& ray, float& distance);
+
+	static bool PointInTriangle(const Point3D& p, const Triangle3D& t);
+	static Plane3D FromTriangle(const Triangle3D& t);
+
+	static Vec3 Barycentric(const Point3D& p, const Triangle3D& t);
+	static Vec3 ProjectVecOnVec(Vec3 a, Vec3 b);
+
+	/**
+	 * Helper
+	 */
+	static float Random(float r1, float r2);
+	static Vec2 RandomVec2(float r1, float r2);
+	static Vec3 RandomVec3(float r1, float r2);
 };
 
 

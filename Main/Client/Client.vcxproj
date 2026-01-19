@@ -19,22 +19,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BillboardDemo.h" />
+    <ClInclude Include="ButtonDemo.h" />
     <ClInclude Include="CameraScript.h" />
-    <ClInclude Include="CollisionDemo.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="OrthographicDemo.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="SnowDemo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BillboardDemo.cpp" />
+    <ClCompile Include="ButtonDemo.cpp" />
     <ClCompile Include="CameraScript.cpp" />
-    <ClCompile Include="CollisionDemo.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OrthographicDemo.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SnowDemo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shaders\AnimationDemo.fx" />
     <FxCompile Include="..\Shaders\AnimInstancingDemo.fx" />
+    <FxCompile Include="..\Shaders\BillboardDemo.fx" />
     <FxCompile Include="..\Shaders\ConstantBuffer.fx" />
     <FxCompile Include="..\Shaders\Global.fx" />
     <FxCompile Include="..\Shaders\GlobalTest.fx" />
@@ -60,6 +67,7 @@
     <FxCompile Include="..\Shaders\RenderDemo.fx" />
     <FxCompile Include="..\Shaders\Sampler.fx" />
     <FxCompile Include="..\Shaders\SkyDemo.fx" />
+    <FxCompile Include="..\Shaders\SnowDemo.fx" />
     <FxCompile Include="..\Shaders\StructuredBufferDemo.fx" />
     <FxCompile Include="..\Shaders\TextureBufferDemo.fx" />
     <FxCompile Include="..\Shaders\Triangle.fx">

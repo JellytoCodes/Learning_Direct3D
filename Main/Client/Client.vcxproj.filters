@@ -38,6 +38,9 @@
     <Filter Include="Game\Week6">
       <UniqueIdentifier>{22c87482-ec85-40ae-9f88-83e39f3b5aa8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shaders\Week6">
+      <UniqueIdentifier>{68129a87-0dd0-4d8b-9a2e-e46f269226a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -49,7 +52,16 @@
     <ClCompile Include="CameraScript.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CollisionDemo.cpp">
+    <ClCompile Include="OrthographicDemo.cpp">
+      <Filter>Game\Week6</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonDemo.cpp">
+      <Filter>Game\Week6</Filter>
+    </ClCompile>
+    <ClCompile Include="BillboardDemo.cpp">
+      <Filter>Game\Week6</Filter>
+    </ClCompile>
+    <ClCompile Include="SnowDemo.cpp">
       <Filter>Game\Week6</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,7 +75,16 @@
     <ClInclude Include="CameraScript.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="CollisionDemo.h">
+    <ClInclude Include="OrthographicDemo.h">
+      <Filter>Game\Week6</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonDemo.h">
+      <Filter>Game\Week6</Filter>
+    </ClInclude>
+    <ClInclude Include="BillboardDemo.h">
+      <Filter>Game\Week6</Filter>
+    </ClInclude>
+    <ClInclude Include="SnowDemo.h">
       <Filter>Game\Week6</Filter>
     </ClInclude>
   </ItemGroup>
@@ -157,6 +178,12 @@
     </FxCompile>
     <FxCompile Include="..\Shaders\StructuredBufferDemo.fx">
       <Filter>Shaders\Week5</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\BillboardDemo.fx">
+      <Filter>Shaders\Week6</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\SnowDemo.fx">
+      <Filter>Shaders\Week6</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

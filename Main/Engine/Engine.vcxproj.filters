@@ -49,6 +49,9 @@
     <Filter Include="99. Headers\Math">
       <UniqueIdentifier>{e723cf2e-d4e5-43a6-84be-6a332c7ce04e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="06. UI &amp; Effect">
+      <UniqueIdentifier>{384c28e3-0c9b-4dbe-99ec-71fa3ecae391}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -230,6 +233,15 @@
     </ClCompile>
     <ClCompile Include="Terrain.cpp">
       <Filter>04. Component\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>06. UI &amp; Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Billboard.cpp">
+      <Filter>06. UI &amp; Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="SnowBillboard.cpp">
+      <Filter>06. UI &amp; Effect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -424,6 +436,15 @@
     </ClInclude>
     <ClInclude Include="Terrain.h">
       <Filter>04. Component\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>06. UI &amp; Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Billboard.h">
+      <Filter>06. UI &amp; Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="SnowBillboard.h">
+      <Filter>06. UI &amp; Effect</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
