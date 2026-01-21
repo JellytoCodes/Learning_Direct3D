@@ -69,12 +69,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, PSTR cmdLine, in
 	//NormalDisplacementMapDemo theApp(hInstance);
 	//TerrainDemo theApp(hInstance);
 	
-	ParticlesDemo theApp(hInstance);
+	//ParticlesDemo theApp(hInstance);
 	//ShadowsDemo theApp(hInstance);
 	//AmbientOcclusionDemo theApp(hInstance);
 	//SsaoDemo theApp(hInstance);
 
-	//MeshViewDemo theApp(hInstance);
+	MeshViewDemo theApp(hInstance);
 	//QuatDemo theApp(hInstance);
 	//SkinnedMeshDemo theApp(hInstance);
 
