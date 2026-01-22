@@ -74,9 +74,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, PSTR cmdLine, in
 	//AmbientOcclusionDemo theApp(hInstance);
 	//SsaoDemo theApp(hInstance);
 
-	MeshViewDemo theApp(hInstance);
+	//MeshViewDemo theApp(hInstance);
 	//QuatDemo theApp(hInstance);
-	//SkinnedMeshDemo theApp(hInstance);
+	SkinnedMeshDemo theApp(hInstance);
 
 	if (!theApp.Init())
 		return 0;
