@@ -63,7 +63,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, PSTR cmdLine, in
 	//CameraDemo theApp(hInstance);
 	//InstancingAndCullingDemo theApp(hInstance);
 	
-	//PickingDemo theApp(hInstance);
+	PickingDemo theApp(hInstance);
 	//CubeMapDemo theApp(hInstance);
 	//DynamicCubeMapDemo theApp(hInstance);
 	//NormalDisplacementMapDemo theApp(hInstance);
@@ -76,7 +76,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, PSTR cmdLine, in
 
 	//MeshViewDemo theApp(hInstance);
 	//QuatDemo theApp(hInstance);
-	SkinnedMeshDemo theApp(hInstance);
+	//SkinnedMeshDemo theApp(hInstance);
 
 	if (!theApp.Init())
 		return 0;
